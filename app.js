@@ -1,8 +1,9 @@
 var express = require('express');
+var os = require('os');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.send('<h1> Hello from host: ' + os.hostname() + '</h1>');
 });
 
 app.listen(3000, function () {
